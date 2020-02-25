@@ -1,0 +1,35 @@
+{
+  "welcomeText": "Welcome to",
+  "startButton": "Start Quiz",
+  "loading": "Loading...",
+  "leaderboard": "Leaderboard",
+  "guideLabel": "Don't know how it works?",
+  "guiteLabelButton": "Click Here",
+
+  "hits": "Hits",
+  "time": "Time",
+
+  "startText": "Starting in...",
+  "timeCounter": "Time left",
+  "heroes": "Heroes",
+  "question": "What's the name of this hero?",
+
+  "total": "Total",
+  "bonus": "Bonus",
+
+  "of": "of",
+
+  "congraz": "Congratulations",
+  "scoreLabel": "your final score is",
+
+  "prevScore": "Previous score",
+
+  "serverError": "An error has occurred on our servers.",
+
+  "inputName": "Your name",
+  "inputNameError": "Please, inform your name",
+  "saveScoreButton": "Save score",
+  "saveScoreSuccess": "Score saved successfully",
+
+  "finish": "Finish"
+}

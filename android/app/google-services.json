@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "144396510350",
+    "firebase_url": "https://heroquiz-4ec70.firebaseio.com",
+    "project_id": "heroquiz-4ec70",
+    "storage_bucket": "heroquiz-4ec70.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144396510350:android:8b913875ef87aae73d15df",
+        "android_client_info": {
+          "package_name": "com.heroquiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "144396510350-0vd38vcc4oo86mrv2bdh517fi33h1ipo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrOPUEWcbWJ4k8-5WHaX9n9BPpkv58wkU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "144396510350-0vd38vcc4oo86mrv2bdh517fi33h1ipo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

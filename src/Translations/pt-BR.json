@@ -1,0 +1,36 @@
+{
+  "welcomeText": "Bem vindo ao",
+  "startButton": "Iniciar Quiz",
+  "loading": "Carregando...",
+
+  "leaderboard": "Leaderboard",
+  "guideLabel": "Não sabe como funciona?",
+  "guiteLabelButton": "Clique aqui",
+
+  "hits": "Acertos",
+  "time": "Tempo",
+
+  "startText": "Começando em...",
+  "timeCounter": "Tempo restante",
+  "heroes": "Heróis",
+  "question": "Qual o nome deste herói?",
+
+  "total": "Total",
+  "bonus": "Bônus",
+
+  "of": "de",
+
+  "congraz": "Parabéns ",
+  "scoreLabel": "sua pontuação final é",
+
+  "prevScore": "Pontuação anterior",
+
+  "serverError": "Ocorreu um erro em nossos servidores.",
+
+  "inputName": "Seu nome",
+  "inputNameError": "Por favor, informe seu nome",
+  "saveScoreButton": "Salvar pontuação",
+  "saveScoreSuccess": "Pontuação salva com sucesso!",
+
+  "finish": "Concluir"
+}
