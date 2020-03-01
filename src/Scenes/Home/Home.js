@@ -9,7 +9,8 @@ import {useNavigation} from '@react-navigation/native';
 import AnimatedContainer from '../../Components/AnimatedContainer';
 import {translate} from '../../Configs/TranslationConfig';
 import {gameReset} from '../../Redux/GameReducers/GameReducer';
-import {BannerAd, BannerAdSize, TestIds} from '@react-native-firebase/admob';
+import {BannerAd, BannerAdSize} from '@react-native-firebase/admob';
+import {ADMOB_API_KEY} from 'react-native-dotenv';
 
 const AnimatedLogo = ({whenAnimationEnd} = this.props) => {
   const [isFinished, setFinished] = useState(false);
@@ -123,7 +124,7 @@ const Home = () => {
       </AnimatedContainer>
 
       {/* <BannerAd
-        unitId={'ca-app-pub-1877111843184236/8708873036'}
+        unitId={ADMOB_API_KEY}
         size={BannerAdSize.FULL_BANNER}
         requestOptions={{
           requestNonPersonalizedAdsOnly: true,

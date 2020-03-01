@@ -13,26 +13,35 @@ const GameCard = ({item, randomNames} = this.props) => {
   const dispatch = useDispatch();
 
   const getRandomNames = listNames => {
-    return [
-      listNames[Math.floor(Math.random() * listNames.length)],
-      listNames[Math.floor(Math.random() * listNames.length)],
-    ];
+    var item1 = listNames[Math.floor(Math.random() * listNames.length)];
+    var item2 = null;
+    do {
+      item2 = listNames[Math.floor(Math.random() * listNames.length)];
+    } while (item1.id === item2.id);
+    return [item1, item2];
   };
 
   useEffect(() => {
-    const randomNamesList = getRandomNames(randomNames);
+    const randomNamesList = getRandomNames(
+      JSON.parse(JSON.stringify(randomNames)),
+    );
     const list = [...randomNamesList, {id: item.id, name: item.name}];
     setButtons(shuffleArray(list));
   }, [item, randomNames]);
 
   const onPressButton = card => {
+    var buttons = [...listButtons];
+    var index = buttons.findIndex(f => f.id === card.id);
     if (!cardPressed) {
       setCardPressed(true);
       if (card.id === item.id) {
+        buttons[index].status = 'acerto';
         dispatch(setHitHero(card));
       } else {
+        buttons[index].status = 'erro';
         dispatch(setMissHero(card));
       }
+      setButtons(buttons);
     }
   };
 
@@ -50,10 +59,12 @@ const GameCard = ({item, randomNames} = this.props) => {
               <View style={styles.cardTopButtons}>
                 <GameButton
                   label={listButtons[0].name}
+                  status={listButtons[0].status}
                   action={() => onPressButton(listButtons[0])}
                 />
                 <GameButton
                   label={listButtons[1].name}
+                  status={listButtons[1].status}
                   action={() => onPressButton(listButtons[1])}
                 />
               </View>
@@ -61,6 +72,7 @@ const GameCard = ({item, randomNames} = this.props) => {
             {listButtons && (
               <GameButton
                 label={listButtons[2].name}
+                status={listButtons[2].status}
                 action={() => onPressButton(listButtons[2])}
               />
             )}

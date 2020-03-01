@@ -35,7 +35,10 @@ export const listHeroesAction = () => {
       HERO_API()
         .get('all.json')
         .then(response => {
-          handleApiSuccess(response.data, Types.LIST_HEROES, dispatch);
+          var responseList = response.data.filter(
+            f => !f.images.lg.includes('no-portrait'),
+          );
+          handleApiSuccess(responseList, Types.LIST_HEROES, dispatch);
         })
         .catch(error => {
           handleApiError(error.response, Types.LIST_HEROES, dispatch);

@@ -9,6 +9,7 @@ import Game from './Game';
 import Leaderboard from './Leaderboard';
 
 import auth from '@react-native-firebase/auth';
+import {APP_COLORS} from '../Configs/Constants';
 
 const Stack = createStackNavigator();
 
@@ -23,7 +24,7 @@ const Routes = () => {
 
   return (
     <View style={styles.container}>
-      <StatusBar hidden />
+      <StatusBar hidden backgroundColor={APP_COLORS.primary} />
       <Stack.Navigator initialRouteName="Home" headerMode="none">
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Game" component={Game} />

@@ -37,7 +37,7 @@ export const reducers = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         game_config: {
-          time: 120,
+          time: 180,
           listRandomHeroes: [],
           listRandomNames: [],
         },

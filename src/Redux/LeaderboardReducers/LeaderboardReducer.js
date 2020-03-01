@@ -91,6 +91,7 @@ export const getLeaderboardAction = () => {
       const snapshot = await ref.once('value');
       const item = snapshot.val();
 
+      handleApiSuccess(null, Types.SAVE_LEADERBOARD, dispatch);
       handleApiSuccess(item, Types.GET_LEADERBOARD, dispatch);
     } catch (ex) {
       handleApiError(ex.message, Types.GET_LEADERBOARD, dispatch);

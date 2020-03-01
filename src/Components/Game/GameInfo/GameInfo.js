@@ -58,7 +58,7 @@ const GameInfo = () => {
       <View style={styles.infoRightContainer}>
         <Text style={styles.infoLabel(currentGameStore.started)}>
           {translate('heroes') + ': ' + (currentGameStore.currentPosition + 1)}/
-          {listHeroesStore.length + 1}
+          {gameConfigStore.listRandomHeroes.length + 1}
         </Text>
       </View>
     </View>

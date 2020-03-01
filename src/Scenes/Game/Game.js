@@ -22,7 +22,7 @@ const Game = () => {
       return {id: f.id, name: f.name};
     });
     const gameConfig = {
-      listRandomHeroes: randomHeroes,
+      listRandomHeroes: randomHeroes.splice(0, 99),
       listRandomNames: heroesNames,
     };
     dispatch(setGameConfigs(gameConfig));

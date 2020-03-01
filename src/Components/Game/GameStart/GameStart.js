@@ -5,8 +5,8 @@ import {useSelector, useDispatch} from 'react-redux';
 import GameCard from '../GameCard';
 import CardTransition from '../CardTransition';
 import {setGameEnd} from '../../../Redux/GameReducers/GameReducer';
-
-import {BannerAd, BannerAdSize, TestIds} from '@react-native-firebase/admob';
+import {BannerAd, BannerAdSize} from '@react-native-firebase/admob';
+import {ADMOB_API_KEY} from 'react-native-dotenv';
 
 const GameStart = () => {
   const [showTransition, setTransition] = useState(false);
@@ -43,7 +43,7 @@ const GameStart = () => {
   return (
     <View style={{flex: 1}}>
       {/* <BannerAd
-        unitId={TestIds.BANNER}
+        unitId={ADMOB_API_KEY}
         size={BannerAdSize.FULL_BANNER}
         requestOptions={{
           requestNonPersonalizedAdsOnly: true,

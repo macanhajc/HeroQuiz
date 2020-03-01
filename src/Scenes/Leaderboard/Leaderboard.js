@@ -9,7 +9,8 @@ import {listLeaderboardAction} from '../../Redux/LeaderboardReducers/Leaderboard
 import Toast from 'react-native-simple-toast';
 import StatusHandler from '../../Components/StatusHandler';
 import {translate} from '../../Configs/TranslationConfig';
-import {BannerAd, BannerAdSize, TestIds} from '@react-native-firebase/admob';
+import {BannerAd, BannerAdSize} from '@react-native-firebase/admob';
+import {ADMOB_API_KEY} from 'react-native-dotenv';
 
 const CardBoard = ({item, index} = this.props) => {
   return (
@@ -72,12 +73,14 @@ const Leaderboard = () => {
         onPress={() => navigation.goBack()}>
         <Icon name={'chevron-left'} color={APP_COLORS.primary} size={30} />
       </TouchableOpacity>
-      <View style={styles.logoContainer}>
-        <LogoSVG color={APP_COLORS.primary} width={100} height={150} />
-        <Text style={styles.titleLabel}>Leaderboard</Text>
-      </View>
       <StatusHandler loading={listLeaderboardStore.isLoading}>
         <FlatList
+          ListHeaderComponent={
+            <View style={styles.logoContainer}>
+              <LogoSVG color={APP_COLORS.primary} width={100} height={150} />
+              <Text style={styles.titleLabel}>Leaderboard</Text>
+            </View>
+          }
           data={listBoard}
           keyExtractor={(item, index) => index.toString()}
           renderItem={({item, index}) => (
@@ -86,7 +89,7 @@ const Leaderboard = () => {
         />
       </StatusHandler>
       {/* <BannerAd
-        unitId={TestIds.BANNER}
+        unitId={ADMOB_API_KEY}
         size={BannerAdSize.FULL_BANNER}
         requestOptions={{
           requestNonPersonalizedAdsOnly: true,
@@ -164,11 +167,12 @@ const styles = StyleSheet.create({
   },
   logoContainer: {
     flexDirection: 'row',
+    justifyContent: 'center',
     alignItems: 'flex-end',
-    paddingLeft: 40,
   },
   iconContainer: {
     width: 30,
+    paddingBottom: 5,
     marginTop: 20,
     marginLeft: 20,
   },

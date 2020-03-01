@@ -141,7 +141,7 @@ const GameEnd = () => {
       <AnimatedContainer
         shouldStart={showContent}
         containerStyle={styles.logoContainer}>
-        <LogoSVG width={120} height={160} />
+        <LogoSVG width={100} height={150} />
       </AnimatedContainer>
       <AnimatedContainer
         shouldStart={showContent}
@@ -233,7 +233,7 @@ const styles = StyleSheet.create({
     backgroundColor: APP_COLORS.primary,
   },
   prevPointsContainer: {
-    marginTop: 20,
+    marginTop: 5,
   },
   labelMargin: {
     marginLeft: 10,
@@ -250,7 +250,8 @@ const styles = StyleSheet.create({
     margin: 5,
   },
   logoContainer: style => ({
-    padding: 20,
+    padding: 10,
+    paddingLeft: 20,
     ...style,
   }),
   resultContainer: style => ({
@@ -270,7 +271,7 @@ const styles = StyleSheet.create({
   },
   congratsLabel: {
     color: '#FFFFFF',
-    fontSize: 46,
+    fontSize: 40,
     fontWeight: 'bold',
   },
   resultPtsContainer: style => ({
