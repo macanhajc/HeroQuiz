@@ -31,5 +31,7 @@
   "saveScoreButton": "Save score",
   "saveScoreSuccess": "Score saved successfully",
 
-  "finish": "Finish"
+  "finish": "Finish",
+  "about": "About",
+  "aboutTitle": "This game was developer with the following open source libraries"
 }

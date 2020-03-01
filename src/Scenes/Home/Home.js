@@ -121,6 +121,12 @@ const Home = () => {
             action={() => navigation.navigate('Leaderboard')}
           />
         )}
+        <View style={{flex: 1}} />
+        <Button
+          title={translate('about')}
+          transparent
+          action={() => navigation.navigate('About')}
+        />
       </AnimatedContainer>
 
       {/* <BannerAd

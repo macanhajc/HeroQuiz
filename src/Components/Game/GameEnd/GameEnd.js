@@ -100,7 +100,7 @@ const GameEnd = () => {
       (currentGameStore.numberOfHits /
         gameConfigStore.listRandomHeroes.length) *
       100;
-    return Number(percent.toFixed(1));
+    return Number(percent.toFixed(0));
   };
 
   useEffect(() => {

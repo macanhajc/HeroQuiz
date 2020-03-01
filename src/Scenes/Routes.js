@@ -7,6 +7,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Home from './Home';
 import Game from './Game';
 import Leaderboard from './Leaderboard';
+import About from './About';
 
 import auth from '@react-native-firebase/auth';
 import {APP_COLORS} from '../Configs/Constants';
@@ -29,6 +30,7 @@ const Routes = () => {
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Game" component={Game} />
         <Stack.Screen name="Leaderboard" component={Leaderboard} />
+        <Stack.Screen name="About" component={About} />
       </Stack.Navigator>
     </View>
   );

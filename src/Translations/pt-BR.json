@@ -32,5 +32,7 @@
   "saveScoreButton": "Salvar pontuação",
   "saveScoreSuccess": "Pontuação salva com sucesso!",
 
-  "finish": "Concluir"
+  "finish": "Concluir",
+  "about": "Sobre",
+  "aboutTitle": "Este jogo foi desenvolvido utilizando das seguintes bibliotecas de código aberto."
 }
