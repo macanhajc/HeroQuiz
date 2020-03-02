@@ -42,7 +42,7 @@ const GameStart = () => {
 
   return (
     <View style={{flex: 1}}>
-      {/* <BannerAd
+      <BannerAd
         unitId={ADMOB_API_KEY}
         size={BannerAdSize.FULL_BANNER}
         requestOptions={{
@@ -54,7 +54,7 @@ const GameStart = () => {
         onAdFailedToLoad={error => {
           console.error('Advert failed to load: ', error);
         }}
-      /> */}
+      />
       <FlatList
         ref={listRef}
         data={gameConfigStore.listRandomHeroes}

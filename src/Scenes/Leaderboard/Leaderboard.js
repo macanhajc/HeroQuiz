@@ -84,11 +84,11 @@ const Leaderboard = () => {
           data={listBoard}
           keyExtractor={(item, index) => index.toString()}
           renderItem={({item, index}) => (
-            <CardBoard item={item} index={index} />
+            <CardBoard item={item} index={index + 1} />
           )}
         />
       </StatusHandler>
-      {/* <BannerAd
+      <BannerAd
         unitId={ADMOB_API_KEY}
         size={BannerAdSize.FULL_BANNER}
         requestOptions={{
@@ -100,7 +100,7 @@ const Leaderboard = () => {
         onAdFailedToLoad={error => {
           console.error('Advert failed to load: ', error);
         }}
-      /> */}
+      />
     </View>
   );
 };

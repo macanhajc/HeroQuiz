@@ -155,7 +155,7 @@ const GameEnd = () => {
               ' ' +
               translate('of') +
               ' ' +
-              gameConfigStore.listRandomHeroes.length}
+              (gameConfigStore.listRandomHeroes.length + 1)}
           </Text>
           <Text style={[styles.subLabel, styles.labelMargin]}>
             {translate('total') + ': '}

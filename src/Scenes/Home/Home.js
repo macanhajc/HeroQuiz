@@ -129,7 +129,7 @@ const Home = () => {
         />
       </AnimatedContainer>
 
-      {/* <BannerAd
+      <BannerAd
         unitId={ADMOB_API_KEY}
         size={BannerAdSize.FULL_BANNER}
         requestOptions={{
@@ -141,7 +141,7 @@ const Home = () => {
         onAdFailedToLoad={error => {
           console.error('Advert failed to load: ', error);
         }}
-      /> */}
+      />
     </View>
   );
 };
